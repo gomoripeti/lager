@@ -168,7 +168,7 @@ trace_file(File, Filter, Config) when is_list(Config) ->
                                           % if there are no other config values
                                           % it is ok to trace into an existing logfile
                                           {ok, exists};
-                                      [_] ->
+                                      _ ->
                                           % otherwise not since we cannot (and mustn't)
                                           % change other parameters on the fly
                                           {error, exists}
